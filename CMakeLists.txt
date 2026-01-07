@@ -13,6 +13,8 @@ project ("drum_machine")
 
 find_package(OpenGL REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(GLEW REQUIRED)
 
 set(IMGUI_DIR ./external/imgui)
 
@@ -47,6 +49,8 @@ target_link_libraries(drum_machine PRIVATE
     imgui
     glfw
     OpenGL::GL
+    glm::glm
+    GLEW::GLEW
 )
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
